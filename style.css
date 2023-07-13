@@ -1,0 +1,288 @@
+body{background-color: black;margin: 0;width: 100vw; height: 100vh;overflow-x: hidden;}
+*{color: #ddd;font-family: 'AOK Buenos Aires', sans-serif;font-weight: 600;}
+#nav, #header
+{
+	
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#header
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	width: 100%;
+	height: 48px;
+	
+	background-color: #141414;
+}
+#header .header-part
+{
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	
+	height: 48px;
+}
+#header #left
+{
+	justify-content: flex-start;
+}
+#header #center
+{
+	justify-content: center;
+}
+#header #right
+{
+	justify-content: flex-end;
+}
+#search-bar
+{
+	background-color: rgba(0,0,0,0);
+	
+	border: 1px solid #aaa;
+	border-radius: 8px;
+	padding-left: 15px;
+	height: 70%;
+	width: 100%;
+}
+button
+{
+	padding: 10px;
+	width: 90px;
+	background-color: #272727;
+	
+	border: none;
+	border-radius: 8px;
+}
+button.invert{background-color: #F63A3C;}
+
+#header .icon
+{
+	width: 30px;
+	height: 30px;
+	padding: 4px;
+}
+
+#content
+{
+	position: absolute;
+	
+	top: 48px;
+	width: 100%;
+	height: calc(100% - 48px);
+}
+#nav
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+	top: 48px;
+	width: 200px;
+	height: 100%;
+	
+	background-color: #171717;
+}
+#nav #channel-card
+{
+	position: relative;
+	width: 100%;
+	height: 64px;
+}
+#channel-card img
+{
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	height: 36px;
+	aspect-ratio: 1;
+	border-radius: 100%;
+}
+#channel-card #user-name
+{
+	position: absolute;
+	left: 64px;
+	top: 18px;
+	
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+#card-content img {border-radius: 100%;}
+#channel-card #user-category
+{
+	position: absolute;
+	left: 64px;
+	top: 36px;
+	
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: #aaa;
+}
+#page
+{
+	position: absolute;
+	display: grid;
+	grid-template-rows: 300px 1fr ;
+	
+	left: 200px;
+	height: 100%;
+	width: calc(100% - 200px);
+}
+#scroll-cards
+{
+	display: grid;
+	grid-template-columns: 64px 1fr 64px;
+	justify-content: center;
+	align-items: center;
+}
+#scroll-cards .icon
+{
+	width: 36px;
+	height: 36px;
+	
+	margin: auto;
+}
+#scroll-cards #arrow-left
+{
+	transform: rotate(180deg);
+}
+#scroll-cards #cards
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 80%;
+}
+#cards #channel-card
+{
+	width: 80%;
+	height: 90%;
+	
+	background-color: #343434;
+	
+	border-radius: 0;
+}
+#cards #user-card
+{
+	width: 80%;
+	height: 90%;
+	display: grid;
+	grid-template-columns: 1fr 208px;
+	
+	background-color: #121212;
+	overflow: hidden;
+	border-radius: 0;
+}
+#cards #user-card #card-image img
+{
+	width: 100%;
+	height: 100%;
+}
+#cards #user-card #card-content
+{
+	position: relative;
+}
+#card-content img
+{
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	
+	left: 13px;
+	top: 13px;
+}
+#card-content #user-name
+{
+	position: absolute;
+	top: 12px;
+	left: 64px;
+}
+#card-content #user-category
+{
+	font-size: 0.7rem;
+	color: #aaa;
+	
+	position: absolute;
+	top: 36px;
+	left: 64px;
+}
+#card-content #user-description
+{
+	font-size: 0.8rem;
+	color: #aaa;
+	
+	position: absolute;
+	top: 78px;
+	left: 12px;
+}
+#recomend{margin-top: 64px;}
+#recomend #section
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 12px;
+	position: relative;
+	
+	width: 100%;
+	height: 240px;
+	
+	margin-bottom: 24px;
+}
+#recomend #section::after
+{
+	content: '';
+	background-color: #666;
+	
+	width: 90%;
+	height: 1px;
+	position: absolute;
+	
+	left: 5%;
+	bottom: 0;
+}
+#recomend #section #card img
+{
+	height: 176px;
+	width: 100%;
+	
+}
+#recomend #section #card #card-content
+{
+	position: relative;
+}
+#recomend #section #card #card-content img
+{
+	height: 36px;
+	width: 36px;
+	
+	border-radius: 100%;
+}
+#recomend #section #card #card-content #user-title
+{
+	position: absolute;
+	left: 64px;
+	top: 12px;
+}
+#recomend #section #card #card-content #user-name
+{
+	font-size: 0.7rem;
+	
+	position: absolute;
+	left: 64px;
+	top: 36px;
+}
+
+
+.icon img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	
+	filter: invert(1);
+}
+/* #F63A3C */
